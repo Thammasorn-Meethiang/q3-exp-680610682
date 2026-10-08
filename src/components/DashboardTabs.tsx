@@ -1,7 +1,15 @@
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export function DashboardTabs() {
   return (
     <div className="w-full">
-      <h1>This is the Dashboard Tabs Component</h1>
+      <Tabs defaultValue="Overview" className="w-[500px]">
+  <TabsList>
+    <TabsTrigger value="Overview">Overview</TabsTrigger>
+    <TabsTrigger value="By Category">By Category</TabsTrigger>
+  </TabsList>
+  <TabsContent value="Overview"></TabsContent>
+  <TabsContent value="By Category"></TabsContent>
+  </Tabs>
     </div>
   );
 }
